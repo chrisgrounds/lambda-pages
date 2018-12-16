@@ -10,7 +10,7 @@ data QueryStrings = QueryStrings
 
 data Response = Response
   { statusCode :: Int
-  , body :: String
+  , body       :: String
   } deriving (Generic)
 
 instance Aeson.FromJSON QueryStrings
