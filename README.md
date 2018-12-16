@@ -9,3 +9,7 @@ This uses the Haskell runtime provided by [Theam](https://github.com/theam/aws-l
 ## Query Parameters
 
 - name
+
+## Static files
+
+The css is stored on S3 and referenced to it from a link attribute.
