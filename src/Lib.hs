@@ -5,7 +5,7 @@ import Aws.Lambda.Runtime
 import qualified Data.Aeson as Aeson
 
 data QueryStrings = QueryStrings 
-    { personName :: String 
+    { name :: String 
     } deriving (Generic, Show)
 
 data Response = Response
@@ -49,7 +49,7 @@ constructWebPage qs = WebPage h b l
             ]
         b = mconcat 
             [ "<h1>Hello there " 
-            , personName qs
+            , name qs
             , "!</h1>"
             ]
         l = ""
@@ -61,5 +61,5 @@ handler event _ = do
       Just p  -> do
           let webpage = constructWebPage p
           return $ Right $ showHtml webpage
-      Nothing -> return $ Left "Please provide only a personName query string"
+      Nothing -> return $ Left "Please provide only a name query string"
 
