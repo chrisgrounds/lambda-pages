@@ -4,8 +4,6 @@ import GHC.Generics
 import Aws.Lambda.Runtime
 import qualified Data.Aeson as Aeson
 
-data Event = Event QueryStrings deriving (Generic, Show)
-
 data QueryStrings = QueryStrings 
     { personName :: String 
     } deriving (Generic, Show)
@@ -15,8 +13,6 @@ data Response = Response
   , body :: String
   } deriving (Generic)
 
-instance Aeson.FromJSON Event
-instance Aeson.ToJSON Event
 instance Aeson.FromJSON QueryStrings
 instance Aeson.ToJSON QueryStrings
 instance Aeson.FromJSON Response
