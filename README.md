@@ -8,4 +8,4 @@ This uses the Haskell runtime provided by [Theam](https://github.com/theam/aws-l
 
 ## Query Parameters
 
-- personName
+- name
