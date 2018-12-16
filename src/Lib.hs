@@ -46,8 +46,16 @@ instance Html WebPage where
 constructWebPage :: QueryStrings -> WebPage
 constructWebPage qs = WebPage h b l
     where
-        h = "<head></head>"
-        b = "<h1>Hello there! " ++ personName qs ++ "</h1>"
+        h = mconcat 
+            [ "<head>"
+            , "<link rel=\"stylesheet\" href=\"https://s3-eu-west-1.amazonaws.com/lambda-pages-css/lambda-pages-css.css\" >"
+            , "</head>"
+            ]
+        b = mconcat 
+            [ "<h1>Hello there " 
+            , personName qs
+            , "!</h1>"
+            ]
         l = ""
 
 handler :: Aeson.Value -> Context -> IO (Either String String)
