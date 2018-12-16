@@ -1,0 +1,4 @@
+.stack-work/
+my-haskell-lambda.cabal
+build/
+*~
