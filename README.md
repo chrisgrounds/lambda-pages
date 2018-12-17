@@ -15,3 +15,13 @@ This uses the Haskell runtime provided by [Theam](https://github.com/theam/aws-l
 ## Static files
 
 The css is stored on S3 and referenced to it from a link attribute.
+
+## Troubleshooting
+
+If you see something like
+
+```
+{errorType=Runtime.ExitError,... Error: Runtime exited with error: exit status 1}
+```
+
+reload the page
