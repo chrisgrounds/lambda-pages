@@ -4,9 +4,7 @@ import GHC.Generics
 import Aws.Lambda.Runtime
 import qualified Data.Aeson as Aeson
 
-data QueryStrings = QueryStrings 
-    { name :: String 
-    } deriving (Generic, Show)
+data QueryStrings = QueryStrings { name :: String } deriving (Generic, Show)
 
 data Response = Response
   { statusCode :: Int
